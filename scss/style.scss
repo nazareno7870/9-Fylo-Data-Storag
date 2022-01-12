@@ -1,4 +1,145 @@
-$body: red;
+$gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+$PaleBlue: hsl(243, 100%, 93%);
+$GrayishBlue: hsl(229, 7%, 55%);
+$DarkBlue: hsl(228, 56%, 26%);
+$VeryDarkBlue: hsl(229, 57%, 11%);
+
+$font:'Raleway', sans-serif;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.attribution { font-size: 11px; text-align: center;margin-top: 40px; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 body{
-    background-color: $body;
+    font-family: $font; 
+    font-size: 14px;
+    background-image: url('../images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-app{
+    background-color: $DarkBlue;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 40px;
+    width: 330px;
+    height: 190px;
+    border-radius: 10px 90px 10px 10px;
+
+    .logo{
+        margin-bottom: 30px;
+    }
+
+    .icons{
+        display: flex;
+
+        .icon{
+            height: 44px;
+            width: 44px;
+            background-color: $VeryDarkBlue;
+            margin-right: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.card-stats{
+    background-color: $DarkBlue;
+    padding: 40px 40px 50px;
+    width: 330px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    h3{
+        font-weight: 500;
+        font-size: 14px;
+        color: rgba(204, 204, 204, 0.789);
+        margin-bottom: 20px;
+        span{
+            color: $PaleBlue ;
+            font-weight: 700;
+        }
+    }
+    .bar-state{
+        width: 280px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: $VeryDarkBlue;
+        position: relative;
+
+        &::before{
+            content: " ";
+            width: 220px;
+            height: 16px;
+            background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+            position: absolute;
+            border-radius: 8px;
+            left: 3px;
+            top: 2px
+        }
+
+        &::after{
+            content: " ";
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 100%;
+            top: 4px;
+            left: 209px
+        }
+    }
+    .min-max{
+        display: flex;
+        justify-content: space-between;
+        width: 280px;
+        margin-top: 10px;
+        h4{
+            color: $PaleBlue;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+    }
+    .leftStorage{
+        position: absolute;
+        background-color: white;
+        height: 70px;
+        width: 160px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 134px;
+        h1{
+            font-size: 40px;
+            color: $VeryDarkBlue;
+        }
+        span{
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-left: 8px;
+            color: rgb(135, 134, 134);
+            font-weight: 700;
+        }
+    }
 }

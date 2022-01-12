@@ -1,2 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 40px; }
+
+.attribution a {
+  color: #3e52a3; }
+
 body {
-  background-color: red; }
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.card-app {
+  background-color: #1d2c67;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 40px;
+  width: 330px;
+  height: 190px;
+  border-radius: 10px 90px 10px 10px; }
+  .card-app .logo {
+    margin-bottom: 30px; }
+  .card-app .icons {
+    display: flex; }
+    .card-app .icons .icon {
+      height: 44px;
+      width: 44px;
+      background-color: #0c122c;
+      margin-right: 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+.card-stats {
+  background-color: #1d2c67;
+  padding: 40px 40px 50px;
+  width: 330px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; }
+  .card-stats h3 {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(204, 204, 204, 0.789);
+    margin-bottom: 20px; }
+    .card-stats h3 span {
+      color: #dddbff;
+      font-weight: 700; }
+  .card-stats .bar-state {
+    width: 280px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #0c122c;
+    position: relative; }
+    .card-stats .bar-state::before {
+      content: " ";
+      width: 220px;
+      height: 16px;
+      background: linear-gradient(to right, #ffa399, #ff4d97);
+      position: absolute;
+      border-radius: 8px;
+      left: 3px;
+      top: 2px; }
+    .card-stats .bar-state::after {
+      content: " ";
+      width: 12px;
+      height: 12px;
+      background-color: #fff;
+      position: absolute;
+      border-radius: 100%;
+      top: 4px;
+      left: 209px; }
+  .card-stats .min-max {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    margin-top: 10px; }
+    .card-stats .min-max h4 {
+      color: #dddbff;
+      text-transform: uppercase;
+      font-size: 12px; }
+  .card-stats .leftStorage {
+    position: absolute;
+    background-color: white;
+    height: 70px;
+    width: 160px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 134px; }
+    .card-stats .leftStorage h1 {
+      font-size: 40px;
+      color: #0c122c; }
+    .card-stats .leftStorage span {
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-left: 8px;
+      color: #878686;
+      font-weight: 700; }
